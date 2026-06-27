@@ -1,0 +1,32 @@
+flowchart TD
+    subgraph INGEST["Offline ingestion (batch, runs once)"]
+        DOCS["Public legal documents<br/>(employment law)"] --> LOAD["Loader / cleaner"]
+        LOAD --> CHUNK["Chunker<br/>300-500 words, 50-100 overlap"]
+        CHUNK --> EMBED["Embedder<br/>sentence-transformers"]
+        EMBED --> INDEX[("Vector index + chunks.jsonl<br/>FAISS / ChromaDB")]
+    end
+
+    Q(["User question"]) --> PLAN["Query Planner"]
+    PLAN --> RETR["Retriever<br/>top-k search"]
+    INDEX -.->|"search"| RETR
+    RETR --> GEN["Answer Generator<br/>cited, structured"]
+    GEN --> VERIFY["Citation Verifier"]
+    VERIFY --> EVAL{"Evaluator<br/>groundedness, relevance,<br/>hallucination risk, coverage"}
+    EVAL -->|"passes"| REPORT["Final scored report"]
+    EVAL -->|"low groundedness /<br/>high risk"| CORRECT["Correction loop<br/>regenerate stricter /<br/>flag for human review"]
+    CORRECT --> REPORT
+    REPORT --> UI(["Streamlit UI<br/>answer, citations, sources,<br/>scores, agent trace"])
+
+    subgraph PROVIDER["Model provider abstraction (model_client.py)"]
+        ANTH["Anthropic API"]
+        OLL["Ollama (stub)"]
+    end
+    GEN -.-> PROVIDER
+    EVAL -.-> PROVIDER
+
+    classDef ingest fill:#e8f0fe,stroke:#4285f4,color:#1a1a1a;
+    classDef eval fill:#fde8e8,stroke:#d93025,color:#1a1a1a;
+    classDef provider fill:#e6f4ea,stroke:#137333,color:#1a1a1a;
+    class DOCS,LOAD,CHUNK,EMBED,INDEX ingest;
+    class VERIFY,EVAL,CORRECT eval;
+    class ANTH,OLL provider;
