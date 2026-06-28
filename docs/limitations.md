@@ -1,0 +1,1 @@
+1. Keeping the footnotes as the focus is on building a working prototype signifying the operability. Otherwise, footnotes should be eliminated as they too are references to other documents and would affect document veracity and thus, the evaluation score.
