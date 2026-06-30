@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 156"
+     font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+     role="img">
+  <title>Recall at k</title>
+  <rect x="0" y="0" width="680" height="156" rx="12" fill="#FAF9F5"/>
+  <text x="50" y="30" fill="#2C2C2A" font-size="14" font-weight="500">Recall@5</text>
+  <text x="50" y="48" fill="#5F5E5A" font-size="12">denominator = every relevant chunk that exists for the query</text>
+
+  <rect x="79" y="64" width="120" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="139" y="86" text-anchor="middle" dominant-baseline="central" fill="#085041" font-size="12">found</text>
+  <rect x="213" y="64" width="120" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="273" y="86" text-anchor="middle" dominant-baseline="central" fill="#085041" font-size="12">found</text>
+  <rect x="347" y="64" width="120" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="407" y="86" text-anchor="middle" dominant-baseline="central" fill="#085041" font-size="12">found</text>
+  <rect x="481" y="64" width="120" height="44" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="541" y="86" text-anchor="middle" dominant-baseline="central" fill="#712B13" font-size="12">missed</text>
+
+  <text x="340" y="138" text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">3 found ÷ 4 relevant total = 0.75</text>
+</svg>

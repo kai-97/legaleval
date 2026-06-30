@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 226"
+     font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+     role="img">
+  <title>Reciprocal rank scale</title>
+  <rect x="0" y="0" width="680" height="226" rx="12" fill="#FAF9F5"/>
+  <text x="50" y="30" fill="#2C2C2A" font-size="14" font-weight="500">MRR — reward shrinks as the first hit sinks</text>
+  <text x="50" y="48" fill="#5F5E5A" font-size="12">bar height = 1 ÷ rank of the first relevant hit</text>
+
+  <rect x="105" y="80"  width="70" height="95" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <rect x="205" y="128" width="70" height="47" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <rect x="305" y="144" width="70" height="31" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <rect x="405" y="151" width="70" height="24" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <rect x="505" y="156" width="70" height="19" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+
+  <text x="140" y="72"  text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">1.00</text>
+  <text x="240" y="120" text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">0.50</text>
+  <text x="340" y="136" text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">0.33</text>
+  <text x="440" y="143" text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">0.25</text>
+  <text x="540" y="148" text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">0.20</text>
+
+  <text x="140" y="191" text-anchor="middle" fill="#5F5E5A" font-size="12">rank 1</text>
+  <text x="240" y="191" text-anchor="middle" fill="#5F5E5A" font-size="12">rank 2</text>
+  <text x="340" y="191" text-anchor="middle" fill="#5F5E5A" font-size="12">rank 3</text>
+  <text x="440" y="191" text-anchor="middle" fill="#5F5E5A" font-size="12">rank 4</text>
+  <text x="540" y="191" text-anchor="middle" fill="#5F5E5A" font-size="12">rank 5</text>
+
+  <text x="340" y="214" text-anchor="middle" fill="#5F5E5A" font-size="12">MRR = average of these reciprocal ranks across all queries</text>
+</svg>

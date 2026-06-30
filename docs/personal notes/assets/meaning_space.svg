@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 460"
+     font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+     role="img">
+  <title>Embeddings as points in meaning space</title>
+  <rect x="0" y="0" width="680" height="460" rx="12" fill="#FAF9F5"/>
+
+  <text x="185" y="80" text-anchor="middle" fill="#085041"
+        font-size="14" font-weight="500">pregnancy / discrimination chunks</text>
+  <circle cx="165" cy="135" r="6" fill="#5DCAA5" stroke="#0F6E56" stroke-width="0.5"/>
+  <circle cx="205" cy="150" r="6" fill="#5DCAA5" stroke="#0F6E56" stroke-width="0.5"/>
+  <circle cx="180" cy="175" r="6" fill="#5DCAA5" stroke="#0F6E56" stroke-width="0.5"/>
+  <circle cx="215" cy="125" r="6" fill="#5DCAA5" stroke="#0F6E56" stroke-width="0.5"/>
+  <circle cx="150" cy="165" r="6" fill="#5DCAA5" stroke="#0F6E56" stroke-width="0.5"/>
+
+  <line x1="250" y1="170" x2="205" y2="150" stroke="#EF9F27" stroke-width="2.5"
+        opacity="0.85" stroke-linecap="round"/>
+  <line x1="250" y1="170" x2="180" y2="175" stroke="#EF9F27" stroke-width="2"
+        opacity="0.7" stroke-linecap="round"/>
+  <line x1="250" y1="170" x2="215" y2="125" stroke="#EF9F27" stroke-width="1.5"
+        opacity="0.55" stroke-linecap="round"/>
+
+  <circle cx="250" cy="170" r="9" fill="#EF9F27" stroke="#854F0B" stroke-width="1"/>
+  <text x="268" y="174" fill="#5F5E5A" font-size="12">your question (embedded)</text>
+
+  <text x="515" y="210" text-anchor="middle" fill="#3C3489"
+        font-size="14" font-weight="500">overtime &amp; wage chunks</text>
+  <circle cx="500" cy="235" r="6" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.5"/>
+  <circle cx="540" cy="260" r="6" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.5"/>
+  <circle cx="515" cy="285" r="6" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.5"/>
+  <circle cx="550" cy="232" r="6" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.5"/>
+  <circle cx="485" cy="265" r="6" fill="#AFA9EC" stroke="#534AB7" stroke-width="0.5"/>
+
+  <circle cx="320" cy="350" r="6" fill="#F0997B" stroke="#993C1D" stroke-width="0.5"/>
+  <circle cx="360" cy="362" r="6" fill="#F0997B" stroke="#993C1D" stroke-width="0.5"/>
+  <circle cx="335" cy="388" r="6" fill="#F0997B" stroke="#993C1D" stroke-width="0.5"/>
+  <circle cx="372" cy="342" r="6" fill="#F0997B" stroke="#993C1D" stroke-width="0.5"/>
+  <circle cx="308" cy="378" r="6" fill="#F0997B" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="340" y="420" text-anchor="middle" fill="#712B13"
+        font-size="14" font-weight="500">family-leave chunks</text>
+</svg>

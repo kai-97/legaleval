@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 156"
+     font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+     role="img">
+  <title>Precision at k</title>
+  <rect x="0" y="0" width="680" height="156" rx="12" fill="#FAF9F5"/>
+  <text x="50" y="30" fill="#2C2C2A" font-size="14" font-weight="500">Precision@5</text>
+  <text x="50" y="48" fill="#5F5E5A" font-size="12">denominator = k, the number of results you returned</text>
+
+  <rect x="141" y="64" width="70" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="176" y="86" text-anchor="middle" dominant-baseline="central" fill="#085041" font-size="14" font-weight="500">✓</text>
+  <rect x="223" y="64" width="70" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="258" y="86" text-anchor="middle" dominant-baseline="central" fill="#085041" font-size="14" font-weight="500">✓</text>
+  <rect x="305" y="64" width="70" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="340" y="86" text-anchor="middle" dominant-baseline="central" fill="#444441" font-size="14" font-weight="500">✕</text>
+  <rect x="387" y="64" width="70" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="422" y="86" text-anchor="middle" dominant-baseline="central" fill="#085041" font-size="14" font-weight="500">✓</text>
+  <rect x="469" y="64" width="70" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+  <text x="504" y="86" text-anchor="middle" dominant-baseline="central" fill="#444441" font-size="14" font-weight="500">✕</text>
+
+  <text x="340" y="138" text-anchor="middle" fill="#2C2C2A" font-size="14" font-weight="500">3 relevant ÷ 5 retrieved = 0.60</text>
+</svg>

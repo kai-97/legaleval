@@ -14,13 +14,9 @@ class Embedder:
         return self.model.get_sentence_embedding_dimension()
 
     def embed(self, texts: list[str]) -> np.ndarray:
-        """Embed a list of texts.
 
-        Returns a float32 array of shape (len(texts), self.dim),
-        each row scaled to unit length.
-        """
-
-        return self.model.encode(texts, normalize_embeddings=True,
+        return self.model.encode(texts,
+                                 normalize_embeddings=True,
                                  convert_to_numpy=True,
                                  batch_size=64,
                                  show_progress_bar=True)
