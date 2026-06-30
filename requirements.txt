@@ -2,3 +2,6 @@ python-dotenv
 beautifulsoup4
 lxml
 pdfplumber
+sentence-transformers
+numpy
+faiss-cpu
