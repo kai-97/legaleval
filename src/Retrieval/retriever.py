@@ -3,7 +3,7 @@ from pathlib import Path
 
 import faiss
 
-from embedder import Embedder
+from src.Retrieval.embedder import Embedder
 
 INDEX_PATH = Path("data/processed/faiss.index")
 RECORDS_PATH = Path("data/processed/index_records.jsonl")

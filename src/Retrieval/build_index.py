@@ -4,7 +4,7 @@ from pathlib import Path
 import faiss
 import numpy as np
 
-from embedder import Embedder
+from src.Retrieval.embedder import Embedder
 
 # Paths are relative to the project root (run from there).
 CHUNKS_PATH = Path("data/processed/chunks.jsonl")
