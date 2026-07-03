@@ -5,7 +5,7 @@ from src.Generation.generator import generate, build_context, SYSTEM_PROMPT
 
 
 
-q = "What makes a non-compete enforceable?"
+q = "Can my employer fire me if I am pregnant?"
 chunks = Retriever().search(q, top_k=3)      # instantiate, then call
 client = get_model_client("anthropic", "claude-opus-4-6")
 

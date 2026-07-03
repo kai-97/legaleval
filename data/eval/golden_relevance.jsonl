@@ -1,0 +1,15 @@
+{"question_id": "q00", "question": "Can my employer fire me for being pregnant?", "relevant_chunk_ids": ["young_v._united_parcel_service_inc._20", "young_v._united_parcel_service_inc._39", "titlevii_2000e_definitions_4"]}
+{"question_id": "q01", "question": "Is it illegal to pay women less than men for the same job?", "relevant_chunk_ids": ["flsa_206_minimum_wage_2", "philips_vs_martin_marietta_corp_3", "ledbetter_vs_goodyear_45"]}
+{"question_id": "q02", "question": "Can an employer refuse to hire someone because of their race?", "relevant_chunk_ids": ["eeoc_prohibited_practices_2", "texas_dept._of_housing_and_community_affairs_v._inclusive_communities_1_84", "eeoc_prohibited_practices_1"]}
+{"question_id": "q03", "question": "Can immigration be a legal cause for hiring someone?", "relevant_chunk_ids": ["eeoc_title_vii_8", "mcdonnell_douglas_v_green_16"]}
+{"question_id": "q04", "question": "When is an employee entitled to overtime pay?", "relevant_chunk_ids": ["dol_fs23_overtime_0", "flsa_207_overtime_8", "flsa_207_overtime_9"]}
+{"question_id": "q05", "question": "Does my employer have to pay me for time spent on call?", "relevant_chunk_ids": ["eeoc_retaliation_guidance_65", "dol_fs23_overtime_3", "dol_fs22_hours_worked_0"]}
+{"question_id": "q06", "question": "What is the federal minimum wage requirement?", "relevant_chunk_ids": ["flsa_206_minimum_wage_0", "flsa_213_exemptions_4"]}
+{"question_id": "q07", "question": "How much unpaid leave can I take to care for a new baby?", "relevant_chunk_ids": ["dol_fs28_fmla_3", "dol_fs28_fmla_0", "flsa_213_exemptions_8"]}
+{"question_id": "q08", "question": "Can I be fired for taking FMLA leave?", "relevant_chunk_ids": ["fmla_2612_leave_2", "eeoc_retaliation_guidance_106", "eeoc_adea_27"]}
+{"question_id": "q09", "question": "Does my job have to be held for me while I am on medical leave?", "relevant_chunk_ids": ["dol_fs28_fmla_6", "ada_12112_discrimination_4"]}
+{"question_id": "q10", "question": "what is the maximum number of days I can be away from office if I combine my PTO and maternal leave?", "relevant_chunk_ids": ["fmla_2612_leave_7", "dol_fs28_fmla_2", "dol_fs28_fmla_4"]}
+{"question_id": "q11", "question": "Can I be fired for reporting safety violations to OSHA?", "relevant_chunk_ids": ["eeoc_retaliation_guidance_63", "dol_major_laws_7", "dol_major_laws_8"]}
+{"question_id": "q12", "question": "Is my employer allowed to fire me without giving a reason?", "relevant_chunk_ids": ["adea_623_practices_1", "eeoc_retaliation_guidance_46", "eeoc_adea_15"]}
+{"question_id": "q13", "question": "Can I be fired in retaliation for filing a discrimination complaint?", "relevant_chunk_ids": ["eeoc_retaliation_guidance_25", "eeoc_retaliation_guidance_14", "mcdonnell_douglas_v_green_6"]}
+{"question_id": "q14", "question": "Is whistleblowing going to cot me my job?", "relevant_chunk_ids": ["mcdonnell_douglas_v_green_12", "eeoc_retaliation_guidance_17"]}
