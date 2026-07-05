@@ -38,23 +38,35 @@ output contract — JSON ONLY, no prose, no ``` fences
 Response with a single raw JSON object where 
 the first character of the JSON should be a '{' and the last '}'.
 Do not use markdown code fences or any text before or after the JSON.
-Example only for format: {"answer": "...", ...}
+Example only for format without the leading and trailing fences (```): {"answer": "...", ...}
    keys: answer (str), citations (list of chunk_id),
    supporting_quotes (list of str, verbatim from chunks),
    limitations (str), needs_human_review (bool)
 """
 
-def generate(question: str, chunks: list[dict], client) -> GeneratedAnswer:
+STRICT_ADDENDUM = """\
+
+STRICT MODE (regeneration after low groundedness)
+   - every sentence must map to a cited chunk_id
+   - drop any claim you cannot ground in a chunk
+   - prefer abstention over an unsupported statement
+"""
+
+def generate(question: str, chunks: list[dict], client, strict=False) -> GeneratedAnswer:
     if not chunks:
         return GeneratedAnswer.abstention("No Chunks")
     
 
     resp = client.complete(user=build_context(question, chunks),
-                        system=SYSTEM_PROMPT)
+                        system=SYSTEM_PROMPT+(STRICT_ADDENDUM if strict else ""))
     try:
-        data = json.loads(resp.text)
+        text = resp.text.strip()
+        if text.startswith("```"):
+            text = text.split("\n", 1)[-1].rsplit("```", 1)[0].strip()
+        data = json.loads(text)
         return GeneratedAnswer(**data)
-    except (json.JSONDecodeError, TypeError):
+    except (json.JSONDecodeError, TypeError) as e:
+        print(f"[generate] parse fail: {e}\nRAW:\n{resp.text!r}")
         return GeneratedAnswer.abstention("JSON returned incorrectly")
 
 def build_context(question:str, chunks: list[dict]):

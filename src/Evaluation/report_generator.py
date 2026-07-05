@@ -9,9 +9,9 @@ class EvalReport:
     partially_supported_count: int
     unsupported_count: int
     hallucination_risk: str  # "low" | "medium" | "high"
-    retrieval_precision: float
-    retrieval_recall: float
-    retrieval_mrr: float
+    retrieval_precision: float | None
+    retrieval_recall: float | None
+    retrieval_mrr: float | None
 
 
 def summarize_verdicts(verdicts: list[ClaimVerdict]) -> dict:
@@ -55,12 +55,14 @@ def classify_hallucination_risk(
 def build_report(
     question_id: str,
     verdicts: list[ClaimVerdict],
-    retrieval_result: dict,
+    retrieval_result: dict | None = None,
 ) -> EvalReport:
     result_dict = summarize_verdicts(verdicts)
     hallu_risk = classify_hallucination_risk(result_dict["unsupported"], len(verdicts))
-
-    return EvalReport(question_id, result_dict["citation_coverage"],
-                      result_dict["supported"], result_dict["partially_supported"],
-                      result_dict["unsupported"], hallu_risk, retrieval_result["precision"], retrieval_result["recall"],
-                      retrieval_result["reciprocal_rank"])
+    precision = retrieval_result["precision"] if retrieval_result else None
+    recall = retrieval_result["recall"] if retrieval_result else None
+    rr = retrieval_result["reciprocal_rank"] if retrieval_result else None
+    return EvalReport(
+        question_id, result_dict["citation_coverage"],
+        result_dict["supported"], result_dict["partially_supported"],
+        result_dict["unsupported"], hallu_risk, precision, recall, rr)
