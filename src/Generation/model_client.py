@@ -2,11 +2,15 @@ import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 import anthropic
+import os
 
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
-load_dotenv()  # reads .env once; SDK picks up ANTHROPIC_API_KEY
+load_dotenv(find_dotenv())  # reads .env once; SDK picks up ANTHROPIC_API_KEY
 
+api_key = os.environ.get("ANTHROPIC_API_KEY")
+if not api_key:
+    raise RuntimeError("ANTHROPIC_API_KEY not set")
 
 @dataclass(frozen=True)
 class ModelResponse:
