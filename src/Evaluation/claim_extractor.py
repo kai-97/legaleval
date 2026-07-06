@@ -2,6 +2,11 @@ from dataclasses import dataclass
 
 import nltk
 
+for pkg in ("punkt_tab", "punkt"):
+    try:
+        nltk.data.find(f"tokenizers/{pkg}")
+    except LookupError:
+        nltk.download(pkg)
 
 @dataclass(frozen=True)
 class Claim:

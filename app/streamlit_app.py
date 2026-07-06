@@ -121,6 +121,7 @@ def render_trace(state):
             "Status": f"{STATUS_ICON.get(s.status, '')} {s.status}",
             "Latency (ms)": f"{s.latency_ms:.0f}",
             "Tokens": s.tokens if s.tokens is not None else "—",
+            "Detail": s.output_summary
         }
         for s in state.steps
     ]
