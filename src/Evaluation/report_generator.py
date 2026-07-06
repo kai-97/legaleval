@@ -19,20 +19,25 @@ def summarize_verdicts(verdicts: list[ClaimVerdict]) -> dict:
     if len(verdicts) == 0:
         raise ValueError("No Verdicts here.")
     
-    sup, par, uns = 0,0,0
+    sup, par, uns, err = 0,0,0, 0
 
     for verdict in verdicts:
         if verdict.verdict == "supported":
             sup += 1
         elif verdict.verdict == "partially_supported":
             par += 1
+        elif verdict.verdict == "parse_error":
+            err += 1
         else:
             uns += 1
     
-    coverage = (sup+par)/len(verdicts)
+    scored = sup + par + uns
+    coverage = (sup+par)/scored if scored else 0.0
+    
     return {"supported": sup,
             "partially_supported": par,
             "unsupported": uns,
+            "parse_error": err,
             "citation_coverage": coverage}
 
 

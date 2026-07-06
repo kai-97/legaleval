@@ -7,3 +7,5 @@ numpy
 faiss-cpu
 anthropic
 nltk
+streamlit
+torchvision

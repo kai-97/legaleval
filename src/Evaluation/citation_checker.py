@@ -5,7 +5,7 @@ from typing import Literal
 from claim_extractor import Claim
 
 Verdict = Literal[
-    "supported", "partially_supported", "unsupported"
+    "supported", "partially_supported", "unsupported", "parse_error"
 ]
 
 CHUNKS_PATH = Path("data/processed/chunks.jsonl")
@@ -57,6 +57,7 @@ def check_claim(
             system=SYSTEM_PROMPT,
             user=f"Claim: {claim.text}\n\nSource:{source_text}",
         ).text
+        raw = raw[raw.find("{"):raw.rfind("}") + 1]
         parsed = json.loads(raw)
         verdict = parsed["verdict"]
         if verdict not in (
@@ -71,7 +72,7 @@ def check_claim(
         json.JSONDecodeError, KeyError, ValueError,
     ) as e:
         return ClaimVerdict(
-            claim.claim_id, claim.text, "unsupported",
+            claim.claim_id, claim.text, "parse_error",
             reasoning=f"judge response parse failure: {e}",
         )
 
